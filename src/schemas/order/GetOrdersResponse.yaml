@@ -5,29 +5,16 @@ items:
   properties:
     order_id:
       type: integer
-    products:
-      type: array
-      items:
-        type: object
-        properties:
-          product_id:
-            type: integer
-          product_name:
-            type: string
-          product_price:
-            type: integer
-          product_discount:
-            type: integer
-          product_description:
-            type: string
-          quantity:
-            type: integer
-    total_products:
+    product_id:
       type: integer
-    total_price:
-      type: integer
+    product_name:
+      type: string
+    product_description:
+      type: string
+    thumbnail:
+      type: string    
     status:
       type: string
-    created_at:
+    order_date:
       type: string
       format: date-time
