@@ -37,6 +37,15 @@ paths:
   /api/product/delete/{product_id}:
     $ref: "@/paths/product/DeleteProduct.yaml"
 
+  /api/cart:
+    $ref: "@/paths/cart/GetCart.yaml"
+  /api/cart/add:
+    $ref: "@/paths/cart/AddToCart.yaml"
+  /api/cart/edit/{cart_id}: 
+    $ref: "@/paths/cart/EditCart.yaml"
+  /api/cart/delete/{cart_id}: 
+    $ref: "@/paths/cart/DeleteCart.yaml"
+
   /api/orders:
     $ref: "@/paths/order/GetOrders.yaml"
   /api/order/{order_id}:
