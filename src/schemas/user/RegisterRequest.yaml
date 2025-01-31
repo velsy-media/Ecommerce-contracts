@@ -7,5 +7,5 @@ properties:
     type: string
     description: User email
   code:
-    type: string
+    type: integer
     description: Verification code
