@@ -1,0 +1,37 @@
+put:
+  summary: Edit a review
+  description: Edit a review
+  tags:
+    - Reviews
+  parameters:
+    - in: path
+      name: review_id
+      required: true
+      description: Review id
+      schema:
+        type: string
+  responses:
+    '204':
+      description: Review edited successfully
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/SuccessResponse.yaml"
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '404':
+      description: Review not found
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
