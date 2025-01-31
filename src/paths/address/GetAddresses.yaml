@@ -17,16 +17,16 @@ get:
       content:
         application/json:
           schema:
-            $ref:  "#/components/ErrorResponse"
+            $ref:  "#/components/schemas/ErrorResponse"
     '401':
       description: Unauthorized
       content:
         application/json:
           schema:
-            $ref:  "#/components/ErrorResponse"
+            $ref:  "#/components/schemas/ErrorResponse"
     '500':
       description: Internal server error
       content:
         application/json:
           schema:
-            $ref:  "#/components/ErrorResponse"
+            $ref:  "#/components/schemas/ErrorResponse"

@@ -16,22 +16,22 @@ put:
       content:
         application/json:
           schema:
-            $ref:  "#/components/SuccessResponse"
+            $ref:  "#/components/schemas/SuccessResponse"
     '400':
       description: Bad request
       content:
         application/json:
           schema:
-            $ref:  "#/components/ErrorResponse"
+            $ref: "#/components/schemas/ErrorResponse"
     '404':
       description: Review not found
       content:
         application/json:
           schema:
-            $ref:  "#/components/ErrorResponse"
+            $ref: "#/components/schemas/ErrorResponse"
     '500':
       description: Internal server error
       content:
         application/json:
           schema:
-            $ref: "#/components/ErrorResponse"
+            $ref: "#/components/schemas/ErrorResponse"

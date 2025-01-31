@@ -16,16 +16,16 @@ delete:
       content:
         application/json:
           schema:
-            $ref: "#/components/SuccessResponse"
+            $ref: "#/components/schemas/SuccessResponse"
     '404':
       description: Product not found
       content:
         application/json:
           schema:
-            $ref:  "#/components/ErrorResponse"
+            $ref:  "#/components/schemas/ErrorResponse"
     '500':
       description: Internal server error
       content:
         application/json:
           schema:
-            $ref:  "#/components/ErrorResponse"
+            $ref:  "#/components/schemas/ErrorResponse"
