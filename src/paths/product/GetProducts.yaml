@@ -61,6 +61,7 @@ get:
         application/json:
           schema:
             $ref: "@/schemas/product/GetProductsResponse.yaml"
+
     '500':
       description: Internal server error
       content:
