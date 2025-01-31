@@ -22,4 +22,3 @@ paths:
     $ref: "@/paths/order/GetOrderById.yaml"
   /api/order/place:
     $ref: "@/paths/order/PlaceOrder.yaml"
-
