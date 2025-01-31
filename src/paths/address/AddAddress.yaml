@@ -1,0 +1,36 @@
+post:
+  summary: Add a new address
+  description: Add a new address
+  tags:
+    - Address
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "@/schemas/address/AddAndEditAddressRequest.yaml"
+  responses:
+    '201':
+      description: Address added successfully
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/SuccessResponse.yaml"
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"

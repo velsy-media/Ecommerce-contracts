@@ -12,6 +12,15 @@ paths:
   /api/user/login:
     $ref: "@/paths/user/Login.yaml"
 
+  /api/user/address:
+    $ref: "@/paths/address/GetAddresses.yaml"
+  /api/user/address/add:
+    $ref: "@/paths/address/AddAddress.yaml"
+  /api/user/address/edit/{address_id}: 
+    $ref: "@/paths/address/EditAddress.yaml"
+  /api/user/address/delete/{address_id}: 
+    $ref: "@/paths/address/DeleteAddress.yaml"
+
   /api/products:
     $ref: "@/paths/product/GetProducts.yaml"
   /api/product/{product_id}:

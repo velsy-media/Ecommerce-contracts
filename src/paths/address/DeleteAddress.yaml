@@ -1,0 +1,37 @@
+delete:
+  summary: Delete address
+  description: Delete address
+  tags:
+    - Address
+  parameters:
+    - name: address_id
+      in: path
+      required: true
+      description: Address id
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Address deleted successfully
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/SuccessResponse.yaml"
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"

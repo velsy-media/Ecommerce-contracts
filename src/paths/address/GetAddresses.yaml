@@ -1,0 +1,32 @@
+get:
+  summary: Get all addresses
+  description: Get all addresses
+  tags:
+    - Address
+  responses:
+    '200':
+      description: A list of addresses
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "@/schemas/address/GetAddressesResponse.yaml"
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
