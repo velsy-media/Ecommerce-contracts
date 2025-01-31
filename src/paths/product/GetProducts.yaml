@@ -67,4 +67,4 @@ get:
       content:
         application/json:
           schema:
-            $ref: "@/schemas/common/ErrorResponse.yaml"
+            $ref:  "#/components/ErrorResponse"

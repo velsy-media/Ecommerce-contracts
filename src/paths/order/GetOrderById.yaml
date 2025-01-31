@@ -23,28 +23,28 @@ get:
       content:
         application/json:
           schema:
-            $ref: '@/schemas/common/ErrorResponse.yaml'
+            $ref:  "#/components/ErrorResponse"
     '401':
       description: Unauthorized
       content:
         application/json:
           schema:
-            $ref: '@/schemas/common/ErrorResponse.yaml'
+            $ref:  "#/components/ErrorResponse"
     '403':
       description: Forbidden
       content:
         application/json:
           schema:
-            $ref: '@/schemas/common/ErrorResponse.yaml'
+            $ref:  "#/components/ErrorResponse"
     '404':
       description: Not found
       content:
         application/json:
           schema:
-            $ref: '@/schemas/common/ErrorResponse.yaml'
+            $ref:  "#/components/ErrorResponse"
     '500':
       description: Internal server error
       content:
         application/json:
           schema:
-            $ref: '@/schemas/common/ErrorResponse.yaml'
+            $ref:  "#/components/ErrorResponse"

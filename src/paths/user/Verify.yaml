@@ -16,22 +16,21 @@ post:
       content:
         application/json:
           schema:
-            $ref: "@/schemas/common/SuccessResponse.yaml"
+            $ref:  "#/components/SuccessResponse"
     '400':
       description: Bad request
       content:
         application/json:
           schema:
-            $ref: "@/schemas/common/ErrorResponse.yaml"
-    '401':
+            $ref:  "#/components/ErrorResponse"
       description: Unauthorized
       content:
         application/json:
           schema:
-            $ref: "@/schemas/common/ErrorResponse.yaml"
+            $ref:  "#/components/ErrorResponse"
     '500':
       description: Internal server error
       content:
         application/json:
           schema:
-            $ref: "@/schemas/common/ErrorResponse.yaml"
+            $ref:  "#/components/ErrorResponse"

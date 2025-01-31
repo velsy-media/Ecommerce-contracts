@@ -3,7 +3,11 @@ info:
   title: Ecommerce Api
   version: 0.1.0
   description: This is the contract for Ecommerce api
-
+components:
+  ErrorResponse:
+    $ref: "@/schemas/common/ErrorResponse.yaml"
+  SuccessResponse:
+    $ref: "@/schemas/common/SuccessResponse.yaml"
 paths:
   /api/user/verify:
     $ref: "@/paths/user/Verify.yaml"
