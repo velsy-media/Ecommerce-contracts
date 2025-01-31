@@ -1,0 +1,42 @@
+get:
+  summary: Get all orders
+  operationId: getOrders
+  tags:
+    - Orders
+  responses:
+    '200':
+      description: List of orders
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/order/GetOrdersResponse.yaml'
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'

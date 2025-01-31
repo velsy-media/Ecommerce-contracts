@@ -1,0 +1,33 @@
+
+type: array
+items:
+  type: object
+  properties:
+    order_id:
+      type: integer
+    products:
+      type: array
+      items:
+        type: object
+        properties:
+          product_id:
+            type: integer
+          product_name:
+            type: string
+          product_price:
+            type: integer
+          product_discount:
+            type: integer
+          product_description:
+            type: string
+          quantity:
+            type: integer
+    total_products:
+      type: integer
+    total_price:
+      type: integer
+    status:
+      type: string
+    created_at:
+      type: string
+      format: date-time
