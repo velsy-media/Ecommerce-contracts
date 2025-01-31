@@ -1,0 +1,37 @@
+post:
+  summary: Login
+  description: Login
+  tags:
+    - Users
+  requestBody:
+    description: User to login
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "@/schemas/user/LoginRequest.yaml"
+  responses:
+    '200':
+      description: User logged in successfully
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/user/LoginResponse.yaml"
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
