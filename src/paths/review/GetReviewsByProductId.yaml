@@ -1,9 +1,11 @@
 get:
   summary: Get reviews by product id
   description: Get reviews by product id
+  tags:
+    - Reviews
   parameters:
-    - name: product_id
-      in: path
+    - in: path
+      name: product_id
       required: true
       description: Product id
       schema:
@@ -14,7 +16,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "@/schemas/review/GetReviews.yaml"
+            $ref: "@/schemas/review/GetReviewsResponse.yaml"
     '404':
       description: Product not found
       content:

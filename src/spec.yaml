@@ -23,7 +23,7 @@ paths:
   /api/order/place:
     $ref: "@/paths/order/PlaceOrder.yaml"
 
-  /api/reviews:
+  /api/reviews/{product_id}:
     $ref: "@/paths/review/GetReviewsByProductId.yaml"
   /api/review/add:
     $ref: "@/paths/review/AddReview.yaml"
