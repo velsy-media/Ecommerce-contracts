@@ -5,6 +5,13 @@ info:
   description: This is the contract for Ecommerce api
 
 paths:
+  /api/user/verify:
+    $ref: "@/paths/user/Verify.yaml"
+  /api/user/register:
+    $ref: "@/paths/user/Register.yaml"
+  /api/user/login:
+    $ref: "@/paths/user/Login.yaml"
+
   /api/products:
     $ref: "@/paths/product/GetProducts.yaml"
   /api/product/{product_id}:
