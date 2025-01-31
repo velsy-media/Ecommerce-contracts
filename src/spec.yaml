@@ -22,3 +22,12 @@ paths:
     $ref: "@/paths/order/GetOrderById.yaml"
   /api/order/place:
     $ref: "@/paths/order/PlaceOrder.yaml"
+
+  /api/reviews:
+    $ref: "@/paths/review/GetReviewsByProductId.yaml"
+  /api/review/add:
+    $ref: "@/paths/review/AddReview.yaml"
+  /api/review/edit/{review_id}: 
+    $ref: "@/paths/review/EditReview.yaml"
+  /api/review/delete/{review_id}: 
+    $ref: "@/paths/review/DeleteReview.yaml"

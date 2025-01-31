@@ -1,0 +1,29 @@
+get:
+  summary: Get reviews by product id
+  description: Get reviews by product id
+  parameters:
+    - name: product_id
+      in: path
+      required: true
+      description: Product id
+      schema:
+        type: string
+  responses:
+    '200':
+      description: A list of reviews
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/review/GetReviews.yaml"
+    '404':
+      description: Product not found
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
