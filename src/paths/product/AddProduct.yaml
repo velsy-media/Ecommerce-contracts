@@ -81,7 +81,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: "@/schemas/products/ProductResponse.yaml"
+            $ref: "@/schemas/product/ProductResponse.yaml"
     '400':
       description: Bad request
       content:
