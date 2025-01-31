@@ -1,0 +1,10 @@
+type: array
+items:
+  type: object
+  properties:
+    product_id:
+      type: integer
+      description: ID of the product
+    quantity:
+      type: integer
+      description: Quantity of the product

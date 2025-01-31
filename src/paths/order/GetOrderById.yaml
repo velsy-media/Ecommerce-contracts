@@ -16,7 +16,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '@/schemas/order/GetOrderById.yaml'
+            $ref: '@/schemas/order/GetOrderByIdResponse.yaml'
     '400':
       description: Bad request
       content:
