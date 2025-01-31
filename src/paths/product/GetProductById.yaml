@@ -17,6 +17,7 @@ get:
         application/json:
           schema:
             $ref: "@/schemas/product/GetProductByIdResponse.yaml"
+            
     '404':
       description: Product not found
       content:

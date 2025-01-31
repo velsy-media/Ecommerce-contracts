@@ -17,6 +17,7 @@ put:
       application/json:
         schema:
           $ref: '@/schemas/product/EditProductRequest.yaml'
+
   responses:
     '200':
       description: Product updated successfully
