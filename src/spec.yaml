@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: Ecommerce Api
+  version: 0.1.0
+  description: This is the contract for Ecommerce api
+
+paths:
+  /api/products:
+    $ref: "@/paths/product/GetProducts.yaml"
+  /api/product/{product_id}:
+    $ref: "@/paths/product/GetProductById.yaml"
+  /api/product/add:
+    $ref: "@/paths/product/AddProduct.yaml"
+  /api/product/edit/{product_id}:
+    $ref: "@/paths/product/EditProduct.yaml"
+  /api/product/delete/{product_id}:
+    $ref: "@/paths/product/DeleteProduct.yaml"

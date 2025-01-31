@@ -1,0 +1,96 @@
+post:
+  summary: Add a new product
+  operationId: addProduct
+  tags:
+    - Products
+  requestBody:
+    description: Product to add
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - name
+            - price
+            - seller_id
+            - stock
+            - sku
+          properties:
+            name:
+              type: string
+              description: Name of the product
+            desc:
+              type: string
+              description: Description of the product
+            seller_id:
+              type: integer
+              description: ID of the seller
+            stock:
+              type: integer
+              description: Stock quantity
+            price:
+              type: integer
+              description: Price of the product
+            discount:
+              type: integer
+              description: Discount on the product
+            is_variants:
+              type: boolean
+              description: Indicates if the product has variants
+            sku:
+              type: string
+              description: Stock Keeping Unit
+            created_at:
+              type: string
+              format: date-time
+              description: Creation timestamp
+            updated_at:
+              type: string
+              format: date-time
+              description: Last update timestamp
+            attributes:
+              type: array
+              items:
+                type: object
+                properties:
+                  key:
+                    type: string
+                  value:
+                    type: string
+            categories:
+              type: array
+              items:
+                type: string
+            images:
+              type: array
+              items:
+                type: object
+                properties:
+                  image_url:
+                    type: string
+                  is_thumbnail:
+                    type: boolean
+
+            variants:
+              type: boolean
+             
+  responses:
+    '201':
+      description: Product created successfully
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/products/ProductResponse.yaml"
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/common/ErrorResponse.yaml"

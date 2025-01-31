@@ -1,0 +1,31 @@
+delete:
+  summary: Delete a product
+  operationId: deleteProduct
+  tags:
+    - Products
+  parameters:
+    - in: path
+      name: product_id
+      required: true
+      schema:
+        type: integer
+      description: ID of the product to delete
+  responses:
+    '204':
+      description: Product deleted successfully
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/SuccessResponse.yaml'
+    '404':
+      description: Product not found
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
