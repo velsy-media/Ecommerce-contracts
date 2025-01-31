@@ -1,0 +1,4 @@
+type: object
+properties:
+  quantity:
+    type: integer

@@ -1,15 +1,22 @@
-get:
-  summary: Get all orders
-  operationId: getOrders
+post:
+  summary: Verify a user
+  description: Verify a user
   tags:
-    - Orders
+    - Users
+  requestBody:
+    description: User to login
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "@/schemas/user/VerifyRequest.yaml"
   responses:
     '200':
-      description: List of orders
+      description: User logged in successfully
       content:
         application/json:
           schema:
-            $ref: '@/schemas/order/GetOrdersResponse.yaml'
+            $ref:  "#/components/schemas/SuccessResponse"
     '400':
       description: Bad request
       content:
@@ -18,18 +25,6 @@ get:
             $ref:  "#/components/schemas/ErrorResponse"
     '401':
       description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '403':
-      description: Forbidden
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '404':
-      description: Not found
       content:
         application/json:
           schema:

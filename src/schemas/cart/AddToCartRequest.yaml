@@ -1,0 +1,14 @@
+type: object
+properties:
+  product_id:
+    type: string
+  quantity:
+    type: integer
+  product_name:
+    type: string
+  product_price:
+    type: number
+  product_image:
+    type: string
+  product_description:
+    type: string

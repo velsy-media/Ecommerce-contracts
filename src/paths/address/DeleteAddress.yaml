@@ -1,24 +1,30 @@
 delete:
-  summary: Delete a product
-  operationId: deleteProduct
+  summary: Delete address
+  description: Delete address
   tags:
-    - Products
+    - Address
   parameters:
-    - in: path
-      name: product_id
+    - name: address_id
+      in: path
       required: true
+      description: Address id
       schema:
-        type: integer
-      description: ID of the product to delete
+        type: string
   responses:
-    '204':
-      description: Product deleted successfully
+    '200':
+      description: Address deleted successfully
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/SuccessResponse"
-    '404':
-      description: Product not found
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    '401':
+      description: Unauthorized
       content:
         application/json:
           schema:

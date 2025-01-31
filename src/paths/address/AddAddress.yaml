@@ -1,21 +1,17 @@
 post:
-  summary: place an order
-  operationId: placeOrder
+  summary: Add a new address
+  description: Add a new address
   tags:
-    - Orders
+    - Address
   requestBody:
-    description: Order data to update
     required: true
     content:
       application/json:
         schema:
-          $ref: '@/schemas/order/PlaceOrderRequest.yaml'
-
-    
-         
+          $ref: "@/schemas/address/AddAndEditAddressRequest.yaml"
   responses:
-    '200':
-      description: List of orders
+    '201':
+      description: Address added successfully
       content:
         application/json:
           schema:
@@ -25,21 +21,9 @@ post:
       content:
         application/json:
           schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+            $ref: "#/components/schemas/ErrorResponse"
     '401':
       description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '403':
-      description: Forbidden
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '404':
-      description: Not found
       content:
         application/json:
           schema:

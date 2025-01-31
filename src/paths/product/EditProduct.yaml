@@ -24,22 +24,22 @@ put:
       content:
         application/json:
           schema:
-            $ref: '@/schemas/common/SuccessResponse.yaml'
+            $ref:  "#/components/schemas/SuccessResponse"
     '400':
       description: Bad request
       content:
         application/json:
           schema:
-            $ref: "@/schemas/common/ErrorResponse.yaml"
+            $ref:  "#/components/schemas/ErrorResponse"
     '404':
       description: Product not found
       content:
         application/json:
           schema:
-            $ref: "@/schemas/common/ErrorResponse.yaml"
+            $ref:  "#/components/schemas/ErrorResponse"
     '500':
       description: Internal server error
       content:
         application/json:
           schema:
-            $ref: "@/schemas/common/ErrorResponse.yaml"
+            $ref:  "#/components/schemas/ErrorResponse"

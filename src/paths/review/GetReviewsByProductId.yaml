@@ -1,32 +1,31 @@
 get:
-  summary: Get a product by ID
-  operationId: getProductById
+  summary: Get reviews by product id
+  description: Get reviews by product id
   tags:
-    - Products
+    - Reviews
   parameters:
     - in: path
       name: product_id
       required: true
+      description: Product id
       schema:
-        type: integer
-      description: ID of the product to retrieve
+        type: string
   responses:
     '200':
-      description: A product
+      description: A list of reviews
       content:
         application/json:
           schema:
-            $ref: "@/schemas/product/GetProductByIdResponse.yaml"
-            
+            $ref: "@/schemas/review/GetReviewsResponse.yaml"
     '404':
       description: Product not found
       content:
         application/json:
           schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+            $ref: "#/components/schemas/ErrorResponse"
     '500':
       description: Internal server error
       content:
         application/json:
           schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+            $ref: "#/components/schemas/ErrorResponse"

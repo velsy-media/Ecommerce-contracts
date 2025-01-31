@@ -1,0 +1,10 @@
+type: array
+items:
+  type: object
+  properties:
+    cart_id:
+      type: string
+    product_id:
+      type: string
+    quantity:
+      type: integer

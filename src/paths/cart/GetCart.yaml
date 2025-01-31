@@ -1,0 +1,30 @@
+get:
+  summary: Get Cart
+  description: Get the cart of the user
+  tags:
+    - Cart
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: "@/schemas/cart/GetCartResponse.yaml"
+    '400':
+      description: Error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"

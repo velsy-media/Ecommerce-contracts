@@ -1,0 +1,22 @@
+type: array
+items:
+  type: object
+  properties:
+    id:
+      type: string
+    street:
+      type: string
+    city:
+      type: string
+    state:
+      type: string
+    zip:
+      type: string
+    country:
+      type: string
+    createdAt:
+      type: string
+      format: date-time
+    updatedAt:
+      type: string
+      format: date-time

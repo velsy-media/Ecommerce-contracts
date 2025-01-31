@@ -1,0 +1,16 @@
+required:
+  - product_id
+  - rating
+  - comment
+  - order_id
+type: object
+
+properties:
+  product_id:
+    type: string
+  order_id:
+    type: string
+  rating:
+    type: integer
+  comment:
+    type: string

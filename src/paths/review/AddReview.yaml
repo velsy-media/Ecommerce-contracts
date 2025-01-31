@@ -1,33 +1,31 @@
 post:
-  summary: Add a new product
-  operationId: addProduct
+  summary: Add a review
+  description: Add a review
   tags:
-    - Products
+    - Reviews
   requestBody:
-    description: Product to add
+    description: Review to add
     required: true
     content:
       application/json:
         schema:
-          $ref: "@/schemas/product/AddProductRequest.yaml"
-
+          $ref: "@/schemas/review/AddReviewRequest.yaml"
   responses:
     '201':
-      description: Product created successfully
+      description: Review added successfully
       content:
         application/json:
           schema:
-            $ref: "@/schemas/product/AddProductResponse.yaml"
-
+            $ref:  "#/components/schemas/SuccessResponse"
     '400':
       description: Bad request
       content:
         application/json:
           schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+            $ref: "#/components/schemas/ErrorResponse"
     '500':
       description: Internal server error
       content:
         application/json:
           schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+            $ref: "#/components/schemas/ErrorResponse"

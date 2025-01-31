@@ -1,0 +1,35 @@
+type: object
+required:
+  - reviews
+properties:
+  summary:
+    type: object
+    properties:
+      total_reviews:
+        type: integer
+      average_rating:
+        type: number  
+      1_star:
+        type: integer
+      2_star: 
+        type: integer
+      3_star:
+        type: integer
+      4_star: 
+        type: integer
+      5_star:
+        type: integer
+  reviews:
+    type: array
+    items:
+      properties:
+        name:
+          type: string
+        rating:
+          type: integer
+        comment:
+          type: string
+        created_at:
+          type: string
+        updated_at:
+          type: string

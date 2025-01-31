@@ -3,24 +3,67 @@ properties:
   order_id:
     type: integer
     description: ID of the order
-  product_id:
-    type: integer
-    description: ID of the product
-  product_name:
-    type: string
-    description: Name of the product
-  product_description:
-    type: string
-    description: Description of the product
-  product_price:
-    type: number
-    description: Price of the product
-  product_discount:
-    type: integer
-    description: Discount on the product
-  quantity:
-    type: integer
-    description: Quantity of the product
-  total:
+  total_price:
     type: number
     description: Total amount of the order
+  payment_status:
+    type: string
+    description: Payment status of the order
+  shipping_status:
+    type: string
+    description: Shipping status of the order
+  shipping_address:
+    type: string
+    description: Shipping address of the order
+  status:
+    type: string
+    description: Status of the order
+  products:
+    type: array
+    items:
+      type: object
+      properties:
+        product_id:
+          type: integer
+          description: ID of the product
+        product_name:
+          type: string
+          description: Name of the product
+        product_description:
+          type: string
+          description: Description of the product
+        thumbnail:
+          type: string
+          description: Thumbnail of the product
+        product_price:
+          type: number
+          description: Price of the product
+        product_discount:
+          type: integer
+          description: Discount on the product
+        quantity:
+          type: integer
+          description: Quantity of the product
+        unit_price:
+          type: number
+          description: Unit price of the product
+        total_price:
+          type: number
+          description: Total price of the product
+        
+        review_id:
+          type: integer
+          description: ID of the review
+        review:
+          type: string
+          description: Review of the product
+        rating:
+          type: integer
+          description: Rating of the product
+
+        order_date:
+          type: string
+          format: date-time
+          description: Date of the order
+
+ 

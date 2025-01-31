@@ -1,15 +1,28 @@
-get:
-  summary: Get all orders
-  operationId: getOrders
+put:
+  summary: Edit address
+  description: Edit address
   tags:
-    - Orders
+    - Address
+  parameters:
+    - name: address_id
+      in: path
+      required: true
+      description: Address id
+      schema:
+        type: string
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "@/schemas/address/AddAndEditAddressRequest.yaml"
   responses:
     '200':
-      description: List of orders
+      description: Address edited successfully
       content:
         application/json:
           schema:
-            $ref: '@/schemas/order/GetOrdersResponse.yaml'
+            $ref: "#/components/schemas/SuccessResponse"
     '400':
       description: Bad request
       content:
@@ -18,18 +31,6 @@ get:
             $ref:  "#/components/schemas/ErrorResponse"
     '401':
       description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '403':
-      description: Forbidden
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '404':
-      description: Not found
       content:
         application/json:
           schema:

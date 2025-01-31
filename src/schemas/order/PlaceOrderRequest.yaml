@@ -1,10 +1,17 @@
-type: array
-items:
-  type: object
-  properties:
-    product_id:
-      type: integer
-      description: ID of the product
-    quantity:
-      type: integer
-      description: Quantity of the product
+type: object
+properties:
+  address_id:
+    type: integer
+    description: ID of the address
+  items:
+    type: array
+    description: List of items in the orde
+    items:
+      type: object
+      properties:
+        product_id:
+          type: integer
+          description: ID of the product
+        quantity:
+          type: integer
+          description: Quantity of the product

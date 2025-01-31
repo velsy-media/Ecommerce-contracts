@@ -3,8 +3,29 @@ info:
   title: Ecommerce Api
   version: 0.1.0
   description: This is the contract for Ecommerce api
-
+components:
+  schemas:
+    ErrorResponse:
+      $ref: "@/schemas/common/ErrorResponse.yaml"
+    SuccessResponse:
+      $ref: "@/schemas/common/SuccessResponse.yaml"
 paths:
+  /api/user/verify:
+    $ref: "@/paths/user/Verify.yaml"
+  /api/user/register:
+    $ref: "@/paths/user/Register.yaml"
+  /api/user/login:
+    $ref: "@/paths/user/Login.yaml"
+
+  /api/user/address:
+    $ref: "@/paths/address/GetAddresses.yaml"
+  /api/user/address/add:
+    $ref: "@/paths/address/AddAddress.yaml"
+  /api/user/address/edit/{address_id}: 
+    $ref: "@/paths/address/EditAddress.yaml"
+  /api/user/address/delete/{address_id}: 
+    $ref: "@/paths/address/DeleteAddress.yaml"
+
   /api/products:
     $ref: "@/paths/product/GetProducts.yaml"
   /api/product/{product_id}:
@@ -16,9 +37,27 @@ paths:
   /api/product/delete/{product_id}:
     $ref: "@/paths/product/DeleteProduct.yaml"
 
+  /api/cart:
+    $ref: "@/paths/cart/GetCart.yaml"
+  /api/cart/add:
+    $ref: "@/paths/cart/AddToCart.yaml"
+  /api/cart/edit/{cart_id}: 
+    $ref: "@/paths/cart/EditCart.yaml"
+  /api/cart/delete/{cart_id}: 
+    $ref: "@/paths/cart/DeleteCart.yaml"
+
   /api/orders:
     $ref: "@/paths/order/GetOrders.yaml"
   /api/order/{order_id}:
     $ref: "@/paths/order/GetOrderById.yaml"
   /api/order/place:
     $ref: "@/paths/order/PlaceOrder.yaml"
+
+  /api/reviews/{product_id}:
+    $ref: "@/paths/review/GetReviewsByProductId.yaml"
+  /api/review/add:
+    $ref: "@/paths/review/AddReview.yaml"
+  /api/review/edit/{review_id}: 
+    $ref: "@/paths/review/EditReview.yaml"
+  /api/review/delete/{review_id}: 
+    $ref: "@/paths/review/DeleteReview.yaml"
