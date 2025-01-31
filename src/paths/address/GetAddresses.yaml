@@ -9,9 +9,7 @@ get:
       content:
         application/json:
           schema:
-            type: array
-            items:
-              $ref: "@/schemas/address/GetAddressesResponse.yaml"
+            $ref: "@/schemas/address/GetAddressesResponse.yaml"
     '400':
       description: Bad request
       content:
