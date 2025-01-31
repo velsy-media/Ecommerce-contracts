@@ -1,0 +1,24 @@
+type: array
+items:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    description:
+      type: string
+    thumbnail:
+      type: array
+      items:
+        type: string
+    discount:
+      type: number
+    price:
+      type: number
+    category:
+      type: array
+      items:
+        type: string
+    rating:
+      type: number

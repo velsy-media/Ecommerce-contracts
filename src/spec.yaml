@@ -15,3 +15,11 @@ paths:
     $ref: "@/paths/product/EditProduct.yaml"
   /api/product/delete/{product_id}:
     $ref: "@/paths/product/DeleteProduct.yaml"
+
+  /api/orders:
+    $ref: "@/paths/order/GetOrders.yaml"
+  /api/order/{order_id}:
+    $ref: "@/paths/order/GetOrderById.yaml"
+  /api/order/place:
+    $ref: "@/paths/order/PlaceOrder.yaml"
+

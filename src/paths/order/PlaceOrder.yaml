@@ -1,0 +1,60 @@
+post:
+  summary: place an order
+  operationId: placeOrder
+  tags:
+    - Orders
+  requestBody:
+    description: Order data to update
+    required: true
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              product_id:
+                type: integer
+                description: ID of the product
+              quantity:
+                type: integer
+                description: Quantity of the product
+    
+         
+  responses:
+    '200':
+      description: List of orders
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/SuccessResponse.yaml'
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '@/schemas/common/ErrorResponse.yaml'
