@@ -1,5 +1,7 @@
 type: object
 properties:
   mobile:
-    type: string
+    type: integer
     description: User mobile number
+required:
+  - mobile

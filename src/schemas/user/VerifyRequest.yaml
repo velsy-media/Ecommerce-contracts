@@ -8,6 +8,5 @@ properties:
     description: OTP sent to user
 required:
   - mobile
-  - email
   - otp
   
