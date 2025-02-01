@@ -26,7 +26,7 @@ paths:
   /api/user/address/delete/{address_id}: 
     $ref: "@/paths/address/DeleteAddress.yaml"
 
-  /api/products:
+  /api/product/all:
     $ref: "@/paths/product/GetProducts.yaml"
   /api/product/{product_id}:
     $ref: "@/paths/product/GetProductById.yaml"
@@ -46,14 +46,14 @@ paths:
   /api/cart/delete/{cart_id}: 
     $ref: "@/paths/cart/DeleteCart.yaml"
 
-  /api/orders:
+  /api/order/all:
     $ref: "@/paths/order/GetOrders.yaml"
   /api/order/{order_id}:
     $ref: "@/paths/order/GetOrderById.yaml"
   /api/order/place:
     $ref: "@/paths/order/PlaceOrder.yaml"
 
-  /api/reviews/{product_id}:
+  /api/review/{product_id}:
     $ref: "@/paths/review/GetReviewsByProductId.yaml"
   /api/review/add:
     $ref: "@/paths/review/AddReview.yaml"
