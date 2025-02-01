@@ -18,6 +18,12 @@ properties:
   status:
     type: string
     description: Status of the order
+  order_date:
+    type: string
+    format: date-time
+    description: Date of the order
+
+ 
   products:
     type: array
     items:
@@ -61,9 +67,4 @@ properties:
           type: integer
           description: Rating of the product
 
-        order_date:
-          type: string
-          format: date-time
-          description: Date of the order
 
- 
