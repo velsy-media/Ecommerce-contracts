@@ -3,9 +3,3 @@ properties:
   mobile:
     type: string
     description: User mobile number
-  email:
-    type: string
-    description: User email
-  password:
-    type: string
-    description: User password

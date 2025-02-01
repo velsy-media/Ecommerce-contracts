@@ -1,9 +1,13 @@
 type: object
 properties:
   mobile:
-    type: string
+    type: integer
     description: User mobile number
-  email:
-    type: string
-    description: User email
+  otp:
+    type: integer
+    description: OTP sent to user
+required:
+  - mobile
+  - email
+  - otp
   
