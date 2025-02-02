@@ -12,8 +12,6 @@ components:
 paths:
   /api/user/verify:
     $ref: "@/paths/user/Verify.yaml"
-  /api/user/register:
-    $ref: "@/paths/user/Register.yaml"
   /api/user/login:
     $ref: "@/paths/user/Login.yaml"
 
