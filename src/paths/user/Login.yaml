@@ -16,7 +16,7 @@ post:
       content:
         application/json:
           schema:
-            $ref: "@/schemas/user/LoginResponse.yaml"
+            $ref: "#/components/schemas/SuccessResponse"
     '400':
       description: Bad request
       content:

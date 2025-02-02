@@ -5,5 +5,3 @@ properties:
   message:
     type: string
     example: Product deleted successfully
-required:
-  - message
