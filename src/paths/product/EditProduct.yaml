@@ -1,5 +1,7 @@
 summary: Edit an existing product
 operationId: editProduct
+security:
+  - bearerAuth: []
 tags:
   - Products
 parameters:

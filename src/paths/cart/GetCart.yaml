@@ -2,6 +2,8 @@ summary: Get Cart
 description: Get the cart of the user
 tags:
   - Cart
+security:
+  - bearerAuth: []
 responses:
   "200":
     description: Success

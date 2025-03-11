@@ -1,5 +1,7 @@
 summary: Edit a review
 description: Edit a review
+security:
+  - bearerAuth: []
 tags:
   - Reviews
 parameters:

@@ -1,5 +1,7 @@
 summary: Edit Cart
 description: Edit the cart of the user
+security:
+  - bearerAuth: []
 tags:
   - Cart
 parameters:

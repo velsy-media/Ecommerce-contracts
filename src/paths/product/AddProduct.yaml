@@ -1,5 +1,7 @@
 summary: Add a new product
 operationId: addProduct
+security:
+  - bearerAuth: []
 tags:
   - Products
 requestBody:

@@ -1,5 +1,7 @@
 summary: Add a review
 description: Add a review
+security:
+  - bearerAuth: []
 tags:
   - Reviews
 requestBody:

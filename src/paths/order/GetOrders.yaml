@@ -1,5 +1,7 @@
 summary: Get all orders
 operationId: getOrders
+security:
+  - bearerAuth: []
 tags:
   - Orders
 responses:

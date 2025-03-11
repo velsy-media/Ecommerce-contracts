@@ -1,5 +1,7 @@
 summary: Add a new address
 description: Add a new address
+security:
+  - bearerAuth: []
 tags:
   - Address
 requestBody:

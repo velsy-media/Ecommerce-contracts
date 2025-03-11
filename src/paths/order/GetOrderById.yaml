@@ -1,49 +1,50 @@
-get:
-  summary: Get order by id
-  operationId: getOrderById
-  tags:
-    - Orders
-  parameters:
-    - in: path
-      name: order_id
-      required: true
-      description: ID of the order
-      schema:
-        type: integer
-  responses:
-    "200":
-      description: Order details
-      content:
-        application/json:
-          schema:
-            $ref: "@/schemas/order/GetOrderByIdResponse.yaml"
-    "400":
-      description: Bad request
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
-    "401":
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
-    "403":
-      description: Forbidden
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
-    "404":
-      description: Not found
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
-    "500":
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
+summary: Get order by id
+operationId: getOrderById
+security:
+  - bearerAuth: []
+tags:
+  - Orders
+parameters:
+  - in: path
+    name: order_id
+    required: true
+    description: ID of the order
+    schema:
+      type: integer
+responses:
+  "200":
+    description: Order details
+    content:
+      application/json:
+        schema:
+          $ref: "@/schemas/order/GetOrderByIdResponse.yaml"
+  "400":
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "401":
+    description: Unauthorized
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "403":
+    description: Forbidden
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "404":
+    description: Not found
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "500":
+    description: Internal server error
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"

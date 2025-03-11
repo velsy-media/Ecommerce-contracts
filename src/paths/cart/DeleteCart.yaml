@@ -2,6 +2,8 @@ tags:
   - Cart
 summary: Delete a cart item
 description: Delete a cart item
+security:
+  - bearerAuth: []
 parameters:
   - in: path
     name: cart_id

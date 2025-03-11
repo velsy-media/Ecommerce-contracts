@@ -1,5 +1,7 @@
 summary: Delete address
 description: Delete address
+security:
+  - bearerAuth: []
 tags:
   - Address
 parameters:

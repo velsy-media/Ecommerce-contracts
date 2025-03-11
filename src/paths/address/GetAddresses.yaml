@@ -1,5 +1,7 @@
 summary: Get all addresses
 description: Get all addresses
+security:
+  - bearerAuth: []
 tags:
   - Address
 responses:

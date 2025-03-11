@@ -1,5 +1,7 @@
 summary: Get reviews by product id
 description: Get reviews by product id
+security:
+  - bearerAuth: []
 tags:
   - Reviews
 parameters:

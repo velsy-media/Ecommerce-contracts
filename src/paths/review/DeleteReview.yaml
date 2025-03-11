@@ -1,5 +1,7 @@
 summary: Delete a review
 description: Delete a review
+security:
+  - bearerAuth: []
 tags:
   - Reviews
 parameters:

@@ -1,5 +1,7 @@
 summary: place an order
 operationId: placeOrder
+security:
+  - bearerAuth: []
 tags:
   - Orders
 requestBody:

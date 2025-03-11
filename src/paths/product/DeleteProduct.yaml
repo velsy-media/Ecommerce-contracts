@@ -1,5 +1,7 @@
 summary: Delete a product
 operationId: deleteProduct
+security:
+  - bearerAuth: []
 tags:
   - Products
 parameters:

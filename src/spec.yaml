@@ -9,6 +9,11 @@ components:
       $ref: "@/schemas/common/ErrorResponse.yaml"
     SuccessResponse:
       $ref: "@/schemas/common/SuccessResponse.yaml"
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
 paths:
   /api/user/verify:
     post:

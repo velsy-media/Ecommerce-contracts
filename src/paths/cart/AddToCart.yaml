@@ -1,5 +1,7 @@
 summary: Add a product to the cart
 description: Add a product to the cart of the user
+security:
+  - bearerAuth: []
 tags:
   - Cart
 requestBody:

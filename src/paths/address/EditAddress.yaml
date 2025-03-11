@@ -1,5 +1,7 @@
 summary: Edit address
 description: Edit address
+security:
+  - bearerAuth: []
 tags:
   - Address
 parameters:
