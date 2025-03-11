@@ -1,7 +1,8 @@
-summary: Verify a user
-description: Verify a user
+summary: Signup a user
+description: Signup a user
+operationId: signupUser
 tags:
-  - Users
+  - Authentication
 requestBody:
   description: User to login
   required: true

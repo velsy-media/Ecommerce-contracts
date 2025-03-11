@@ -1,7 +1,8 @@
-summary: Login
-description: Login
+summary: Signin a user
+description: Signin a user
+operationId: signinUser
 tags:
-  - Users
+  - Authentication
 requestBody:
   description: User to login
   required: true
