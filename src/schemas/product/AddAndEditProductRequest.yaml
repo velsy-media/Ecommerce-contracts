@@ -1,66 +1,60 @@
 type: object
-required:
-  - name
-  - price
-  - seller_id
-  - stock
-  - sku
 properties:
   name:
     type: string
     description: Name of the product
-  desc:
+  description:
     type: string
     description: Description of the product
-  seller_id:
-    type: integer
-    description: ID of the seller
   stock:
     type: integer
     description: Stock quantity
   price:
-    type: integer
+    type: number
     description: Price of the product
   discount:
-    type: integer
+    type: number
     description: Discount on the product
-  is_variants:
-    type: boolean
-    description: Indicates if the product has variants
   sku:
     type: string
     description: Stock Keeping Unit
-  created_at:
-    type: string
-    format: date-time
-    description: Creation timestamp
-  updated_at:
-    type: string
-    format: date-time
-    description: Last update timestamp
-  attributes:
-    type: array
-    items:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: string
-  categories:
-    type: array
-    items:
-      type: string
   images:
     type: array
     items:
       type: object
       properties:
-        image_url:
+        url:
           type: string
-        is_thumbnail:
-          type: boolean
-
   variants:
-    type: boolean
-   
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+        sku:
+          type: string
+        price:
+          type: number
+        stock:
+          type: integer
+        images:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+  categoryIds:
+    type: array
+    items:
+      type: string
+  attributes:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+        value:
+          type: string

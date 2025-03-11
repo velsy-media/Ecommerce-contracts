@@ -1,24 +1,48 @@
-type: array
-items:
-  type: object
-  properties:
-    id:
-      type: integer
-    name:
-      type: string
-    description:
-      type: string
-    thumbnail:
-      type: array
-      items:
-        type: string
-    discount:
-      type: number
-    price:
-      type: number
-    category:
-      type: array
-      items:
-        type: string
-    rating:
-      type: number
+type: object
+properties:
+  products:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+        stock:
+          type: integer
+        discount:
+          type: number
+        sku:
+          type: string
+        thumbnail:
+          type: string
+        categories:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+        reviewSummary:
+          type: object
+          properties:
+            avgRating:
+              type: number
+            totalRatings:
+              type: integer
+  meta:
+    type: object
+    properties:
+      total:
+        type: integer
+      page:
+        type: integer
+      limit:
+        type: integer
+      totalPages:
+        type: integer

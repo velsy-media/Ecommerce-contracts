@@ -10,7 +10,7 @@ requestBody:
   content:
     application/json:
       schema:
-        $ref: "@/schemas/product/AddProductRequest.yaml"
+        $ref: "@/schemas/product/AddAndEditProductRequest.yaml"
 
 responses:
   "201":
