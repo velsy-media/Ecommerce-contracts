@@ -28,7 +28,7 @@ paths:
       $ref: "@/paths/address/GetAddresses.yaml"
     post:
       $ref: "@/paths/address/AddAddress.yaml"
-  /api/user/address/{address_id}: 
+  /api/user/address/{address_id}:
     put:
       $ref: "@/paths/address/EditAddress.yaml"
     delete:
@@ -39,15 +39,14 @@ paths:
       $ref: "@/paths/product/GetProducts.yaml"
     post:
       $ref: "@/paths/product/AddProduct.yaml"
-    
+
   /api/product/{product_id}:
+    get:
+      $ref: "@/paths/product/GetProductById.yaml"
     put:
       $ref: "@/paths/product/EditProduct.yaml"
     delete:
       $ref: "@/paths/product/DeleteProduct.yaml"
-    get:
-      $ref: "@/paths/product/GetProductById.yaml"
-
 
   /api/cart:
     get:
