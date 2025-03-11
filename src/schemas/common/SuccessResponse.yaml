@@ -4,4 +4,4 @@ required:
 properties:
   message:
     type: string
-    example: Product deleted successfully
+    example: Operation Executed Successfully
