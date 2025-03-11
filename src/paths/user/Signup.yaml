@@ -8,14 +8,14 @@ requestBody:
   content:
     application/json:
       schema:
-        $ref: "@/schemas/user/VerifyRequest.yaml"
+        $ref: "@/schemas/user/SignupRequest.yaml"
 responses:
   "200":
     description: User logged in successfully
     content:
       application/json:
         schema:
-          $ref: "@/schemas/user/VerifyResponse.yaml"
+          $ref: "@/schemas/user/SignupResponse.yaml"
   "400":
     description: Bad request
     content:

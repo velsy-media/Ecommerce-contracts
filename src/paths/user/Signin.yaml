@@ -8,7 +8,7 @@ requestBody:
   content:
     application/json:
       schema:
-        $ref: "@/schemas/user/LoginRequest.yaml"
+        $ref: "@/schemas/user/SigninRequest.yaml"
 responses:
   "200":
     description: User logged in successfully

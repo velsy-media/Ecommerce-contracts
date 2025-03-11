@@ -1,0 +1,16 @@
+type: object
+properties:
+  email:
+    type: string
+    description: User email number
+    example: "domain@example.com"
+  password:
+    type: string
+    description: User password
+    format: password
+    minLength: 6
+    maxLength: 20
+    example: "123456"
+required:
+  - email
+  - password

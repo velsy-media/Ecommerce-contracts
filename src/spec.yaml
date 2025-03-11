@@ -15,12 +15,13 @@ components:
       scheme: bearer
       bearerFormat: JWT
 paths:
-  /api/user/verify:
+  /api/user/signup:
     post:
-      $ref: "@/paths/user/Verify.yaml"
-  /api/user/login:
+      $ref: "@/paths/user/Signup.yaml"
+
+  /api/user/signin:
     post:
-      $ref: "@/paths/user/Login.yaml"
+      $ref: "@/paths/user/Signin.yaml"
 
   /api/user/address:
     get:
@@ -67,7 +68,7 @@ paths:
       $ref: "@/paths/order/PlaceOrder.yaml"
   /api/order/{order_id}:
     get:
-    $ref: "@/paths/order/GetOrderById.yaml"
+      $ref: "@/paths/order/GetOrderById.yaml"
 
   /api/review:
     post:
