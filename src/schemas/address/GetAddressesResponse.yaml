@@ -4,19 +4,17 @@ items:
   properties:
     id:
       type: string
+    phone_no:
+      type: string
     street:
       type: string
     city:
       type: string
     state:
       type: string
-    zip:
-      type: string
+    pin_code:
+      type: integer
     country:
       type: string
-    createdAt:
-      type: string
-      format: date-time
-    updatedAt:
-      type: string
-      format: date-time
+    default:
+      type: boolean
