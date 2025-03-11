@@ -1,0 +1,10 @@
+required:
+  - rating
+  - comment
+type: object
+
+properties:
+  rating:
+    type: integer
+  comment:
+    type: string

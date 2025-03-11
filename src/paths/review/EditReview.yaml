@@ -11,6 +11,12 @@ parameters:
     description: Review id
     schema:
       type: string
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: "@/schemas/review/EditReviewRequest.yaml"
 responses:
   "204":
     description: Review edited successfully
