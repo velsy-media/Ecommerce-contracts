@@ -1,20 +1,93 @@
-
 type: array
 items:
   type: object
   properties:
-    order_id:
-      type: integer
-    product_id:
-      type: integer
-    product_name:
+    id:
       type: string
-    product_description:
-      type: string
-    thumbnail:
-      type: string    
     status:
       type: string
-    order_date:
+    paymentStatus:
+      type: string
+    paymentMethod:
+      type: string
+    transactionId:
+      type: string
+      nullable: true
+    subtotal:
+      type: number
+    discount:
+      type: number
+    tax:
+      type: number
+    shippingCost:
+      type: number
+    total:
+      type: number
+    notes:
+      type: string
+    trackingNumber:
+      type: string
+      nullable: true
+    shippingMethod:
+      type: string
+    estimatedDelivery:
       type: string
       format: date-time
+      nullable: true
+    deliveredAt:
+      type: string
+      format: date-time
+      nullable: true
+    cancelledAt:
+      type: string
+      format: date-time
+      nullable: true
+    refundedAt:
+      type: string
+      format: date-time
+      nullable: true
+    createdAt:
+      type: string
+      format: date-time
+    updatedAt:
+      type: string
+      format: date-time
+    items:
+      type: array
+      items:
+        type: object
+        properties:
+          orderId:
+            type: string
+          productId:
+            type: string
+          variantId:
+            type: string
+            nullable: true
+          name:
+            type: string
+          sku:
+            type: string
+          price:
+            type: number
+          quantity:
+            type: integer
+          discount:
+            type: number
+          total:
+            type: number
+          createdAt:
+            type: string
+            format: date-time
+          updatedAt:
+            type: string
+            format: date-time
+          product:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              thumbnail:
+                type: string

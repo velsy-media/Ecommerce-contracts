@@ -1,17 +1,30 @@
 type: object
 properties:
-  address_id:
-    type: integer
+  addressId:
+    type: string
     description: ID of the address
   items:
     type: array
-    description: List of items in the orde
+    description: List of items in the order
     items:
       type: object
       properties:
-        product_id:
-          type: integer
+        productId:
+          type: string
           description: ID of the product
+        variantId:
+          type: string
+          nullable: true
+          description: ID of the product variant
         quantity:
           type: integer
           description: Quantity of the product
+  paymentMethod:
+    type: string
+    description: Payment method for the order
+  shippingMethod:
+    type: string
+    description: Shipping method for the order
+  notes:
+    type: string
+    description: Additional notes for the order

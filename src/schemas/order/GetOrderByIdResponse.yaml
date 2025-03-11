@@ -1,70 +1,134 @@
 type: object
 properties:
-  order_id:
-    type: integer
-    description: ID of the order
-  total_price:
-    type: number
-    description: Total amount of the order
-  payment_status:
+  id:
     type: string
-    description: Payment status of the order
-  shipping_status:
-    type: string
-    description: Shipping status of the order
-  shipping_address:
-    type: string
-    description: Shipping address of the order
   status:
     type: string
-    description: Status of the order
-  order_date:
+  paymentStatus:
+    type: string
+  paymentMethod:
+    type: string
+  transactionId:
+    type: string
+    nullable: true
+  subtotal:
+    type: number
+  discount:
+    type: number
+  tax:
+    type: number
+  shippingCost:
+    type: number
+  total:
+    type: number
+  notes:
+    type: string
+  trackingNumber:
+    type: string
+    nullable: true
+  shippingMethod:
+    type: string
+  estimatedDelivery:
     type: string
     format: date-time
-    description: Date of the order
-
- 
-  products:
+    nullable: true
+  deliveredAt:
+    type: string
+    format: date-time
+    nullable: true
+  cancelledAt:
+    type: string
+    format: date-time
+    nullable: true
+  refundedAt:
+    type: string
+    format: date-time
+    nullable: true
+  createdAt:
+    type: string
+    format: date-time
+  updatedAt:
+    type: string
+    format: date-time
+  items:
     type: array
     items:
       type: object
       properties:
-        product_id:
-          type: integer
-          description: ID of the product
-        product_name:
+        id:
           type: string
-          description: Name of the product
-        product_description:
+        orderId:
           type: string
-          description: Description of the product
-        thumbnail:
+        productId:
           type: string
-          description: Thumbnail of the product
-        product_price:
+        variantId:
+          type: string
+          nullable: true
+        name:
+          type: string
+        price:
           type: number
-          description: Price of the product
-        product_discount:
-          type: integer
-          description: Discount on the product
         quantity:
           type: integer
-          description: Quantity of the product
-        unit_price:
+        discount:
           type: number
-          description: Unit price of the product
-        total_price:
+        total:
           type: number
-          description: Total price of the product
-        
-        review_id:
-          type: integer
-          description: ID of the review
-        review:
+        createdAt:
           type: string
-          description: Review of the product
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        product:
+          type: object
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            images:
+              type: string
+        variant:
+          type: object
+          nullable: true
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+            thumbnail:
+              type: string
+  address:
+    type: object
+    properties:
+      id:
+        type: string
+      phone_no:
+        type: string
+      street:
+        type: string
+      city:
+        type: string
+      state:
+        type: string
+      pin_code:
+        type: integer
+      country:
+        type: string
+
+  reviews:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        productId:
+          type: string
         rating:
           type: integer
-          description: Rating of the product
+        comment:
+          type: string
 
 
