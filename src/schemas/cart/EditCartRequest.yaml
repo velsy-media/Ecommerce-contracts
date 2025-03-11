@@ -1,4 +1,6 @@
 type: object
 properties:
+  cartItemId:
+    type: string
   quantity:
     type: integer

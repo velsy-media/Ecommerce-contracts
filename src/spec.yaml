@@ -53,10 +53,9 @@ paths:
       $ref: "@/paths/cart/GetCart.yaml"
     post:
       $ref: "@/paths/cart/AddToCart.yaml"
-  /api/cart/edit/{cart_id}:
+  /api/cart/{cart_id}:
     put:
       $ref: "@/paths/cart/EditCart.yaml"
-  /api/cart/delete/{cart_id}:
     delete:
       $ref: "@/paths/cart/DeleteCart.yaml"
 

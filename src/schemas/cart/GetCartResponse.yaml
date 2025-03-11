@@ -1,10 +1,44 @@
-type: array
-items:
-  type: object
-  properties:
-    cart_id:
-      type: string
-    product_id:
-      type: string
-    quantity:
-      type: integer
+type: object
+properties:
+  id:
+    type: string
+  total:
+    type: number
+  items:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        cartId:
+          type: string
+        productId:
+          type: string
+        variantId:
+          type: string
+          nullable: true
+        quantity:
+          type: integer
+        product:
+          type: object
+          properties:
+            name:
+              type: string
+            price:
+              type: number
+            discount:
+              type: number
+            thumbnail:
+              type: string
+        variant:
+          type: object
+          nullable: true
+          properties:
+            name:
+              type: string
+            price:
+              type: number
+            thumbnail:
+              type: string
+              
