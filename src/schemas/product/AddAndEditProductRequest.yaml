@@ -18,6 +18,9 @@ properties:
   sku:
     type: string
     description: Stock Keeping Unit
+  thumbnail:
+    type: string
+    description: URL of the thumbnail image
   images:
     type: array
     items:
@@ -38,6 +41,8 @@ properties:
           type: number
         stock:
           type: integer
+        thumbnail:
+          type: string
         images:
           type: array
           items:
