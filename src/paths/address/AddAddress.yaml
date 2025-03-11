@@ -1,36 +1,35 @@
-post:
-  summary: Add a new address
-  description: Add a new address
-  tags:
-    - Address
-  requestBody:
-    required: true
+summary: Add a new address
+description: Add a new address
+tags:
+  - Address
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: "@/schemas/address/AddAndEditAddressRequest.yaml"
+responses:
+  "201":
+    description: Address added successfully
     content:
       application/json:
         schema:
-          $ref: "@/schemas/address/AddAndEditAddressRequest.yaml"
-  responses:
-    '201':
-      description: Address added successfully
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/SuccessResponse"
-    '400':
-      description: Bad request
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
-    '401':
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '500':
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+          $ref: "#/components/schemas/SuccessResponse"
+  "400":
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "401":
+    description: Unauthorized
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "500":
+    description: Internal server error
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"

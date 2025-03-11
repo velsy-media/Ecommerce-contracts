@@ -1,45 +1,44 @@
-put:
-  summary: Edit an existing product
-  operationId: editProduct
-  tags:
-    - Products
-  parameters:
-    - in: path
-      name: product_id
-      required: true
-      schema:
-        type: integer
-      description: ID of the product to edit
-  requestBody:
-    description: Product data to update
+summary: Edit an existing product
+operationId: editProduct
+tags:
+  - Products
+parameters:
+  - in: path
+    name: product_id
     required: true
+    schema:
+      type: integer
+    description: ID of the product to edit
+requestBody:
+  description: Product data to update
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: "@/schemas/product/EditProductRequest.yaml"
+
+responses:
+  "200":
+    description: Product updated successfully
     content:
       application/json:
         schema:
-          $ref: '@/schemas/product/EditProductRequest.yaml'
-
-  responses:
-    '200':
-      description: Product updated successfully
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/SuccessResponse"
-    '400':
-      description: Bad request
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '404':
-      description: Product not found
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '500':
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+          $ref: "#/components/schemas/SuccessResponse"
+  "400":
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "404":
+    description: Product not found
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "500":
+    description: Internal server error
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"

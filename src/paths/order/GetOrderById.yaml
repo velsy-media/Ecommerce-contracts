@@ -11,38 +11,37 @@ get:
       schema:
         type: integer
   responses:
-    '200':
+    "200":
       description: Order details
       content:
         application/json:
           schema:
-            $ref: '@/schemas/order/GetOrderByIdResponse.yaml'
-
-    '400':
+            $ref: "@/schemas/order/GetOrderByIdResponse.yaml"
+    "400":
       description: Bad request
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ErrorResponse"
-    '401':
+    "401":
       description: Unauthorized
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ErrorResponse"
-    '403':
+    "403":
       description: Forbidden
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ErrorResponse"
-    '404':
+    "404":
       description: Not found
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/ErrorResponse"
-    '500':
+    "500":
       description: Internal server error
       content:
         application/json:

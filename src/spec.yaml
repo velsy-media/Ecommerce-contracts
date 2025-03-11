@@ -11,51 +11,64 @@ components:
       $ref: "@/schemas/common/SuccessResponse.yaml"
 paths:
   /api/user/verify:
-    $ref: "@/paths/user/Verify.yaml"
+    post:
+      $ref: "@/paths/user/Verify.yaml"
   /api/user/login:
-    $ref: "@/paths/user/Login.yaml"
+    post:
+      $ref: "@/paths/user/Login.yaml"
 
   /api/user/address:
-    $ref: "@/paths/address/GetAddresses.yaml"
-  /api/user/address/add:
-    $ref: "@/paths/address/AddAddress.yaml"
-  /api/user/address/edit/{address_id}: 
-    $ref: "@/paths/address/EditAddress.yaml"
-  /api/user/address/delete/{address_id}: 
-    $ref: "@/paths/address/DeleteAddress.yaml"
+    get:
+      $ref: "@/paths/address/GetAddresses.yaml"
+    post:
+      $ref: "@/paths/address/AddAddress.yaml"
+  /api/user/address/{address_id}: 
+    put:
+      $ref: "@/paths/address/EditAddress.yaml"
+    delete:
+      $ref: "@/paths/address/DeleteAddress.yaml"
 
-  /api/product/all:
-    $ref: "@/paths/product/GetProducts.yaml"
+  /api/product:
+    get:
+      $ref: "@/paths/product/GetProducts.yaml"
+    post:
+      $ref: "@/paths/product/AddProduct.yaml"
+    
   /api/product/{product_id}:
-    $ref: "@/paths/product/GetProductById.yaml"
-  /api/product/add:
-    $ref: "@/paths/product/AddProduct.yaml"
-  /api/product/edit/{product_id}:
-    $ref: "@/paths/product/EditProduct.yaml"
-  /api/product/delete/{product_id}:
-    $ref: "@/paths/product/DeleteProduct.yaml"
+    put:
+      $ref: "@/paths/product/EditProduct.yaml"
+    delete:
+      $ref: "@/paths/product/DeleteProduct.yaml"
+    get:
+      $ref: "@/paths/product/GetProductById.yaml"
+
 
   /api/cart:
-    $ref: "@/paths/cart/GetCart.yaml"
-  /api/cart/add:
-    $ref: "@/paths/cart/AddToCart.yaml"
-  /api/cart/edit/{cart_id}: 
-    $ref: "@/paths/cart/EditCart.yaml"
-  /api/cart/delete/{cart_id}: 
-    $ref: "@/paths/cart/DeleteCart.yaml"
+    get:
+      $ref: "@/paths/cart/GetCart.yaml"
+    post:
+      $ref: "@/paths/cart/AddToCart.yaml"
+  /api/cart/edit/{cart_id}:
+    put:
+      $ref: "@/paths/cart/EditCart.yaml"
+  /api/cart/delete/{cart_id}:
+    delete:
+      $ref: "@/paths/cart/DeleteCart.yaml"
 
-  /api/order/all:
-    $ref: "@/paths/order/GetOrders.yaml"
+  /api/order:
+    get:
+      $ref: "@/paths/order/GetOrders.yaml"
+    post:
+      $ref: "@/paths/order/PlaceOrder.yaml"
   /api/order/{order_id}:
+    get:
     $ref: "@/paths/order/GetOrderById.yaml"
-  /api/order/place:
-    $ref: "@/paths/order/PlaceOrder.yaml"
 
-  /api/review/{product_id}:
-    $ref: "@/paths/review/GetReviewsByProductId.yaml"
-  /api/review/add:
-    $ref: "@/paths/review/AddReview.yaml"
-  /api/review/edit/{review_id}: 
-    $ref: "@/paths/review/EditReview.yaml"
-  /api/review/delete/{review_id}: 
-    $ref: "@/paths/review/DeleteReview.yaml"
+  /api/review:
+    post:
+      $ref: "@/paths/review/AddReview.yaml"
+  /api/review/{review_id}:
+    put:
+      $ref: "@/paths/review/EditReview.yaml"
+    delete:
+      $ref: "@/paths/review/DeleteReview.yaml"

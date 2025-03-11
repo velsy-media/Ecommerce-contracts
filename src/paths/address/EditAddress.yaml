@@ -1,43 +1,42 @@
-put:
-  summary: Edit address
-  description: Edit address
-  tags:
-    - Address
-  parameters:
-    - name: address_id
-      in: path
-      required: true
-      description: Address id
-      schema:
-        type: string
-  requestBody:
+summary: Edit address
+description: Edit address
+tags:
+  - Address
+parameters:
+  - name: address_id
+    in: path
     required: true
+    description: Address id
+    schema:
+      type: string
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: "@/schemas/address/AddAndEditAddressRequest.yaml"
+responses:
+  "200":
+    description: Address edited successfully
     content:
       application/json:
         schema:
-          $ref: "@/schemas/address/AddAndEditAddressRequest.yaml"
-  responses:
-    '200':
-      description: Address edited successfully
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/SuccessResponse"
-    '400':
-      description: Bad request
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '401':
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '500':
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+          $ref: "#/components/schemas/SuccessResponse"
+  "400":
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "401":
+    description: Unauthorized
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "500":
+    description: Internal server error
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"

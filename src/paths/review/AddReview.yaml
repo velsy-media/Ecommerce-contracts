@@ -1,31 +1,30 @@
-post:
-  summary: Add a review
-  description: Add a review
-  tags:
-    - Reviews
-  requestBody:
-    description: Review to add
-    required: true
+summary: Add a review
+description: Add a review
+tags:
+  - Reviews
+requestBody:
+  description: Review to add
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: "@/schemas/review/AddReviewRequest.yaml"
+responses:
+  '201':
+    description: Review added successfully
     content:
       application/json:
         schema:
-          $ref: "@/schemas/review/AddReviewRequest.yaml"
-  responses:
-    '201':
-      description: Review added successfully
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/SuccessResponse"
-    '400':
-      description: Bad request
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
-    '500':
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
+          $ref:  "#/components/schemas/SuccessResponse"
+  '400':
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  '500':
+    description: Internal server error
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"

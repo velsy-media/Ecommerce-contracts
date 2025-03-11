@@ -1,33 +1,32 @@
-post:
-  summary: Add a new product
-  operationId: addProduct
-  tags:
-    - Products
-  requestBody:
-    description: Product to add
-    required: true
+summary: Add a new product
+operationId: addProduct
+tags:
+  - Products
+requestBody:
+  description: Product to add
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: "@/schemas/product/AddProductRequest.yaml"
+
+responses:
+  "201":
+    description: Product created successfully
     content:
       application/json:
         schema:
-          $ref: "@/schemas/product/AddProductRequest.yaml"
+          $ref: "@/schemas/product/AddProductResponse.yaml"
 
-  responses:
-    '201':
-      description: Product created successfully
-      content:
-        application/json:
-          schema:
-            $ref: "@/schemas/product/AddProductResponse.yaml"
-
-    '400':
-      description: Bad request
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '500':
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+  "400":
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "500":
+    description: Internal server error
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"

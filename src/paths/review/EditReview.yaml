@@ -1,37 +1,36 @@
-put:
-  summary: Edit a review
-  description: Edit a review
-  tags:
-    - Reviews
-  parameters:
-    - in: path
-      name: review_id
-      required: true
-      description: Review id
-      schema:
-        type: string
-  responses:
-    '204':
-      description: Review edited successfully
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/SuccessResponse"
-    '400':
-      description: Bad request
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
-    '404':
-      description: Review not found
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
-    '500':
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref: "#/components/schemas/ErrorResponse"
+summary: Edit a review
+description: Edit a review
+tags:
+  - Reviews
+parameters:
+  - in: path
+    name: review_id
+    required: true
+    description: Review id
+    schema:
+      type: string
+responses:
+  "204":
+    description: Review edited successfully
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/SuccessResponse"
+  "400":
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "404":
+    description: Review not found
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "500":
+    description: Internal server error
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"

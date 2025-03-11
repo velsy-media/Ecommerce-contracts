@@ -1,37 +1,36 @@
-post:
-  summary: Verify a user
-  description: Verify a user
-  tags:
-    - Users
-  requestBody:
-    description: User to login
-    required: true
+summary: Verify a user
+description: Verify a user
+tags:
+  - Users
+requestBody:
+  description: User to login
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: "@/schemas/user/VerifyRequest.yaml"
+responses:
+  "200":
+    description: User logged in successfully
     content:
       application/json:
         schema:
-          $ref: "@/schemas/user/VerifyRequest.yaml"
-  responses:
-    '200':
-      description: User logged in successfully
-      content:
-        application/json:
-          schema:
-            $ref:  "@/schemas/user/VerifyResponse.yaml"
-    '400':
-      description: Bad request
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '401':
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '500':
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+          $ref: "@/schemas/user/VerifyResponse.yaml"
+  "400":
+    description: Bad request
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "401":
+    description: Unauthorized
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "500":
+    description: Internal server error
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"

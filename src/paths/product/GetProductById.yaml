@@ -1,32 +1,30 @@
-get:
-  summary: Get a product by ID
-  operationId: getProductById
-  tags:
-    - Products
-  parameters:
-    - in: path
-      name: product_id
-      required: true
-      schema:
-        type: integer
-      description: ID of the product to retrieve
-  responses:
-    '200':
-      description: A product
-      content:
-        application/json:
-          schema:
-            $ref: "@/schemas/product/GetProductByIdResponse.yaml"
-            
-    '404':
-      description: Product not found
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
-    '500':
-      description: Internal server error
-      content:
-        application/json:
-          schema:
-            $ref:  "#/components/schemas/ErrorResponse"
+summary: Get a product by ID
+operationId: getProductById
+tags:
+  - Products
+parameters:
+  - in: path
+    name: product_id
+    required: true
+    schema:
+      type: integer
+    description: ID of the product to retrieve
+responses:
+  "200":
+    description: A product
+    content:
+      application/json:
+        schema:
+          $ref: "@/schemas/product/GetProductByIdResponse.yaml"
+  "404":
+    description: Product not found
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
+  "500":
+    description: Internal server error
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/ErrorResponse"
