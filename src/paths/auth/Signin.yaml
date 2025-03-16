@@ -1,6 +1,6 @@
-summary: Signup a user
-description: Signup a user
-operationId: signupUser
+summary: Signin a user
+description: Signin a user
+operationId: signinUser
 tags:
   - Authentication
 requestBody:
@@ -9,14 +9,14 @@ requestBody:
   content:
     application/json:
       schema:
-        $ref: "@/schemas/user/SignupRequest.yaml"
+        $ref: "@/schemas/auth/SigninRequest.yaml"
 responses:
   "200":
     description: User logged in successfully
     content:
       application/json:
         schema:
-          $ref: "@/schemas/user/SignupResponse.yaml"
+          $ref: "@/schemas/auth/SigninAndSignupResponse.yaml"
   "400":
     description: Bad request
     content:

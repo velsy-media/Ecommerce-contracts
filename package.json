@@ -1,11 +1,14 @@
 {
   "dependencies": {
+    "@openapitools/openapi-generator-cli": "^2.17.0",
     "fs": "^0.0.1-security",
     "js-yaml": "^4.1.0",
     "openapi-typescript": "^7.6.0",
     "path": "^0.12.7"
   },
   "scripts": {
-    "build": "node index.js && npx openapi-typescript dist/schema.yaml --output dist/types.ts"
+    "build": "node index.js",
+    "build:type": "node index.js && npx openapi-typescript dist/schema.yaml --output dist/types.ts",
+    "build:sdk":"node index.js  && cd dist && openapi-generator-cli generate -i schema.yaml -g typescript-axios -o sdk"
   }
 }
