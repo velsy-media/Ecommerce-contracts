@@ -37,6 +37,7 @@ paths:
   /api/product:
     get:
       $ref: "@/paths/product/GetProducts.yaml"
+  /api/seller-product:
     post:
       $ref: "@/paths/product/AddProduct.yaml"
 
