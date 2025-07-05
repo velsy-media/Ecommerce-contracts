@@ -1,6 +1,6 @@
 type: object
 properties:
-  id:
+  address_id:
     type: string
   message:
     type: string

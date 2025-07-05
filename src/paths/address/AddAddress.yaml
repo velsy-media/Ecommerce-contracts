@@ -16,7 +16,7 @@ responses:
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/SuccessResponse"
+          $ref: "@/schemas/address/AddAddressResponse.yaml"
   "400":
     description: Bad request
     content:
